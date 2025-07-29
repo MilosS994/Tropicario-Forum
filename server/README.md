@@ -11,8 +11,8 @@
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
-  <a href="#documentation">Download</a> •
-  <a href="#technologies-used">Credits</a> •
+  <a href="#documentation">Documentation</a> •
+  <a href="#technologies-used">Technologies used</a> •
 </p>
 
 ## Key Features
