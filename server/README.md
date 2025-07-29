@@ -1,107 +1,97 @@
-Tropicario Forum (Backend)
-Tropicario is a backend project for a modern community forum, inspired by Palmtalk.org, dedicated to enthusiasts of tropical, subtropical, and exotic plants — especially palms, cacti, fruit, and rare greenery. This project was created out of a deep passion for plant growing and forum communities.
+<h1 align="center">
+  <br>
+  <img src="/server/TROPICARIO-FORUM-LOGO.png" alt="Tropicario Forum" width="200">
+  <br>
+  Tropicario Forum
+  <br>
+</h1>
 
----
+<h4 align="center">Tropicario Forum (Backend) Tropicario is a backend project for a modern community forum, inspired by Palmtalk.org, dedicated to enthusiasts of tropical, subtropical, and exotic plants — especially palms, cacti, fruit, and rare greenery. This project was created out of a deep passion for plant growing and forum communities.</h4>
 
-✨ Features
-• Full RESTful API for a community forum
-• Admin panel with advanced user/content moderation
-• User authentication and role-based access
-• Image upload to Cloudinary
-• Forgot/reset password system with email (via Nodemailer)
-• Pagination, search, sorting on admin endpoints
-• Notifications system (unread/read)
-• Robust input validation, rate limiting, error handling
-• Swagger/OpenAPI docs
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#documentation">Download</a> •
+  <a href="#technologies-used">Credits</a> •
+</p>
 
----
+## Key Features
 
-TECHNOLOGIES USED
-Core Stack
-• Node.js + Express.js
-• MongoDB + Mongoose
-Auth, Security, Uploads
-• jsonwebtoken, bcryptjs, cookie-parser
-• helmet, cors, express-rate-limit
-• multer + cloudinary
-API & Docs
-• express-validator for validations
-• swagger-ui-express + swagger-jsdoc
-Developer Tools
-• nodemon, cross-env
-• jest, supertest for testing
-• morgan for logging
-• dotenv for environment management
+- Full RESTful API for a community forum
+- Admin panel with advanced user/content moderation
+- User authentication and role-based access
+- Image upload to Cloudinary
+- Forgot/reset password system with email (via Nodemailer)
+- Pagination, search, sorting on admin endpoints
+- Notifications system (unread/read)
+- Robust input validation, rate limiting, error handling
+- Swagger/OpenAPI docs
 
----
+## How To Use
 
-PROJECT STRUCTURE
-/src
-/config - DB connection, swagger
-/controllers - All logic for auth, user, admin, content, notifications
-/middlewares - Auth, admin check, rate limit, error handling, validators
-/models - Mongoose models for User, Section, Thread, Topic, Comment, Notification
-/routes - Modular Express routers (auth, user, admin, threads, topics, etc)
-/utils - Utility functions
-server.js - App init and startup logic
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
----
-
-API OVERVIEW (Router Highlights)
-Auth Routes
-• Register / Login / Logout
-• Forgot + Reset password (via email)
-User Routes
-• View & update profile (username/email/fullname)
-• Change password
-• Upload avatar (Cloudinary)
-• Delete account
-Notification Routes
-• Get unread notifications
-• Mark notification as read
-Admin Routes (via /api/v1/admin)
-• CRUD Sections & Threads
-• Ban / Unban / Delete / Restore users
-• View banned / deleted / all users
-• Manage Topics: pin/unpin, close/open, delete
-• Delete Comments
-• Get user stats (topics/comments count)
-Public Content Routes
-• Sections, Threads, Topics (create, get, edit)
-• Comments (create, delete)
-
----
-
-Run Locally (for development only)
-Note: This project is primarily for code reference. Local running not required for end users.
-
-# Clone project
-
+```bash
+# Clone this repository
 $ git clone https://github.com/MilosS994/Tropicario-Forum.git
 
-# Install dependencies
-
+# Go into server folder
 $ cd server
+
+# Install dependencies
 $ npm install
 
-# Start in dev
+# Create .env file (example given)
 
+PORT=5001
+NODE_ENV=development
+
+MONGO_URI=...
+MONGO_URI_TEST=...
+
+JWT_SECRET=...
+JWT_EXPIRES_IN=1d
+
+CLOUDINARY_CLOUD_NAME=...
+CLOUDINARY_API_KEY=...
+CLOUDINARY_API_SECRET=...
+
+CLIENT_URL=http://localhost:5173
+
+SMTP_HOST=smtp.ethereal.email
+SMTP_PORT=587
+SMTP_USER=...
+SMTP_PASS=...
+
+# Run the app in the development mode
 $ npm run dev
+```
+
+## Documentation
+
+For Swagger API Docs once server is running, visit: [API DOCUMENTATION](http://localhost:5001/api-docs)
+
+## Technologies used
+
+This backend project includes these core technologies and npm packages:
+
+- [Express.js](https://expressjs.com/)
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [Mongoose](https://mongoosejs.com/)
+- [Cloudinary](https://cloudinary.com/)
+- [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+- [bcryptjs](https://www.npmjs.com/package/bcryptjs)
+- [Swagger](https://swagger.io/)
+- [express-rate-limit](https://www.npmjs.com/package/express-rate-limit)
+- [express-validator](https://express-validator.github.io/docs)
+- [Multer](https://www.npmjs.com/package/multer)
+- [Jest](https://jestjs.io/)
+- [Supertest](https://www.npmjs.com/package/supertest)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [helmet](https://www.npmjs.com/package/helmet)
+- [cors](https://www.npmjs.com/package/cors)
 
 ---
 
-📚 Swagger API Docs
-Once server is running, visit:
-http://localhost:5001/api-docs
-
----
-
-📓 Author & Vision
-Created by Milos Srejic as a passion project from love for palms, cacti and exotic plants.
-This backend was built in the spirit of Palmtalk.org — but designed to be clean, modern and flexible for any plant community.
-GitHub: @MilosS994
-
----
-
-🙌 Contributions & Feedback
-This project is open for feedback and improvement. PRs, suggestions and ideas are welcome.
+> GitHub [@MilosS994](https://github.com/MilosS994) &nbsp;&middot;&nbsp;
