@@ -67,7 +67,7 @@ app.use(errorMiddleware);
 export default app;
 
 // Start server
-if (process.env.NODE_ENV === "development") {
+if (process.env.NODE_ENV !== "test") {
   const PORT = process.env.PORT || 5001;
   const startServer = async () => {
     try {
