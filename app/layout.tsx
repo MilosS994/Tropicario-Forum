@@ -31,7 +31,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <QueryProvider>
-          <AuthProvider>{children}</AuthProvider>
+          <AuthProvider>
+            <main className="flex-1 w-full max-w-5xl mx-auto px-4 md:px-6 py-2 md:py-4">
+              {children}
+            </main>
+          </AuthProvider>
         </QueryProvider>
       </body>
     </html>
