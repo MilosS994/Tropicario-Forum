@@ -210,8 +210,6 @@ userSchema.index({
   email: "text",
 });
 userSchema.index({ fullName: 1 });
-userSchema.index({ username: 1 });
-userSchema.index({ email: 1 });
 userSchema.index({ role: 1 });
 userSchema.index({ status: 1 });
 userSchema.index({ lastActive: -1 });
